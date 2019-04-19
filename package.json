@@ -1,0 +1,31 @@
+{
+  "name": "@manifoldco/icons",
+  "version": "0.0.0",
+  "description": "Manifold’s icon system",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manifoldco/icons.git"
+  },
+  "author": "@manifoldco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manifoldco/icons/issues"
+  },
+  "homepage": "https://github.com/manifoldco/icons#readme",
+  "scripts": {
+    "build": "pack build",
+    "publish": "pack publish"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-ts-standard-pkg"
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@pika/pack": "^0.3.7",
+    "@pika/plugin-ts-standard-pkg": "^0.3.15",
+    "typescript": "^3.4.4"
+  }
+}

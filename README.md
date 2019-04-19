@@ -1,5 +1,3 @@
-# icons
+# Manifold Icons
 
-Manifold&#39;s icon system
-
-
+Manifold’s icon system
