@@ -16,7 +16,6 @@
     "build": "pack build",
     "publish": "pack publish"
   },
-  "main": "dist-web",
   "@pika/pack": {
     "pipeline": [
       [
@@ -24,11 +23,15 @@
       ],
       [
         "@pika/plugin-build-web"
+      ],
+      [
+        "@pika/plugin-build-node"
       ]
     ]
   },
   "devDependencies": {
     "@pika/pack": "^0.3.7",
+    "@pika/plugin-build-node": "^0.3.15",
     "@pika/plugin-build-web": "^0.3.15",
     "@pika/plugin-ts-standard-pkg": "^0.3.15",
     "typescript": "^3.4.4"
