@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - 12.2.0
+cache: npm
+stages:
+  - test
+jobs:
+  include:
+    - stage: test
+      name: '🔨 build'
+      script: npm run build
