@@ -5,13 +5,8 @@ Manifold’s icon system
 ## Setup
 
 ```bash
-npm i
-cp .manifold.yml.example .manifold.yml
+npm install
 ```
-
-This will work out-of-box, but edit `.manifold.yml` if necessary (separate
-file allows changes without accidentally committing and breaking things for
-others).
 
 ## Usage
 
@@ -19,17 +14,29 @@ others).
 npm i @manifoldco/icons
 ```
 
-```ts
+```jsx
 import { arrow_right } from '@manifoldco/icons';
+
+const Icon = () => (
+  <svg
+    viewBox="0 0 1024 1024"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsX="http://www.w3.org/1999/xlink"
+  >
+    <path d={arrow_right} />
+  </svg>
+);
 ```
+
+_Note: the `viewBox="0 0 1024 1024"` is the most important part!_
 
 ## Publishing to npm
 
-```bash
-npm run publish
-```
+You must be logged into npm and have access to the `@manifoldco` team to publish.
 
-_Note: this is **different** from `npm publish`!_
+```bash
+npm run deploy
+```
 
 Other repos use Git tagging, but this is a little different. We’re using
 @pika/pack’s npm publish script, which is a command prompt UI. For that reason,
